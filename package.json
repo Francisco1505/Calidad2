@@ -1,0 +1,22 @@
+{
+  "name": "calidad2",
+  "version": "1.0.0",
+  "description": "mi primer proyecto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Francisco1505/Calidad2.git"
+  },
+  "author": "francisco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Francisco1505/Calidad2/issues"
+  },
+  "homepage": "https://github.com/Francisco1505/Calidad2#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
