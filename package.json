@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Francisco1505/Calidad2#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "hapi": "^16.6.3",
+    "hapi-router": "^3.5.0"
   }
 }

@@ -1,20 +1,25 @@
-const express = require('express');
+const hapi = require('hapi');
 
-const server = express();
 
-server.get('/', function(request, response){
-    response.send('Hello root');
+const server = new hapi.Server();
+server.connection({
+    host: '0.0.0.0',
+    port:3000
 });
-server.post('/usuarios', function(request, response){
-    //response.send('Hello user');
-    var usuarios = {
-       name:'Juanito',
-       lastname: 'Perez',
-       username:'JP',
-       password:'1234'
-    };
-    response.send(usuarios);
+
+server.register([{
+    register: require('hapi-router'),
+    options: {
+        routes: 'routes/**/*.js'}
+    }],
+ function (err) {
+        if(err) {
+            console.log('Error cargando módulo');
+        }
 });
- server.listen(3000, function(){
-    console.log('Server running on http://localhost:3000');
- });
+//server.route();
+
+server.start(()=>{
+console.log('Server running on: ', server.info.uri);
+});
+
