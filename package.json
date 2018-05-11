@@ -4,7 +4,8 @@
   "description": "mi primer proyecto",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "lab -c"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,16 @@
   },
   "homepage": "https://github.com/Francisco1505/Calidad2#readme",
   "dependencies": {
+    "dotenv": "^5.0.1",
     "hapi": "^16.6.3",
-    "hapi-router": "^3.5.0"
+    "hapi-postgres-connection": "^6.5.0",
+    "hapi-router": "^3.5.0",
+    "inert": "^4.2.1",
+    "joi": "^13.1.2",
+    "save": "^2.3.2"
+  },
+  "devDependencies": {
+    "code": "^5.2.0",
+    "lab": "^14.3.4"
   }
 }
